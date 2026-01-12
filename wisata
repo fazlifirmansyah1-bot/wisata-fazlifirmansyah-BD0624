@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore Nusantara</title>
+
+<style>
+:root {
+  --blue: #3a7ca5;
+  --green: #6b9080;
+  --beige: #f6f4f1;
+  --dark: #2f3e46;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: var(--beige);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+section {
+  padding: 80px 8%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+}
+
+.hero button {
+  margin-top: 30px;
+  padding: 14px 36px;
+  border: none;
+  background: var(--green);
+  color: white;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.hero button:hover {
+  background: var(--blue);
+  transform: scale(1.05);
+}
+
+/* DESTINASI */
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+  transition: .4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin-bottom: 5px;
+}
+
+/* ABOUT */
+.about {
+  background: white;
+  border-radius: 20px;
+  padding: 50px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: .4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* TESTIMONI */
+.testimoni {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.testi-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.testi-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 40px 8%;
+  text-align: center;
+}
+
+footer a {
+  color: #ddd;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: .8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1 { font-size: 2.2rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Explore Nusantara</h1>
+    <p>Temukan keindahan alam Indonesia dengan pengalaman visual yang modern dan aesthetic</p>
+    <button>Explore Now</button>
+  </div>
+</section>
+
+<!-- DESTINASI -->
+<section>
+  <h2>Destinasi Populer</h2>
+  <div class="destinations fade">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1541417904950-b855846fe074">
+      <div class="card-content">
+        <h3>Bali</h3>
+        <p>Indonesia</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1589308078059-972e52a7c4f1">
+      <div class="card-content">
+        <h3>Labuan Bajo</h3>
+        <p>Nusa Tenggara Timur</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600404929649-39d6fbbab4b3">
+      <div class="card-content">
+        <h3>Raja Ampat</h3>
+        <p>Papua Barat</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <div class="about fade">
+    <h2>Tentang Wisata</h2>
+    <p>Indonesia menyimpan ribuan destinasi menakjubkan dengan keindahan alam, budaya, dan kearifan lokal yang unik. Explore Nusantara hadir untuk menginspirasi perjalananmu dengan tampilan visual modern dan pengalaman terbaik.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <h2>Galeri Foto</h2>
+  <div class="gallery fade">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+    <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98">
+    <img src="https://images.unsplash.com/photo-1519817650390-64a93db511aa">
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section>
+  <h2>Testimoni Pengunjung</h2>
+  <div class="testimoni fade">
+    <div class="testi-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg">
+      <h4>Alya</h4>
+      <p>⭐⭐⭐⭐⭐</p>
+      <p>Website ini bikin aku langsung pengen traveling!</p>
+    </div>
+    <div class="testi-card">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg">
+      <h4>Rizky</h4>
+      <p>⭐⭐⭐⭐⭐</p>
+      <p>Desainnya clean dan enak dilihat banget.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Follow us: 
+    <a href="#">Instagram</a> |
+    <a href="#">TikTok</a> |
+    <a href="#">Twitter</a>
+  </p>
+  <p>&copy; 2026 Explore Nusantara. All Rights Reserved.</p>
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+faders.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
